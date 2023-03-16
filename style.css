@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: 100% 100%;
+}
+
+svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+#blades-3rd, #blades-1st, #blades-2nd, #blades-4th {
+    animation: blades .15s linear infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes blades {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+    
+}
+
+#drone-camera {
+    animation: camera 2.0s linear infinite alternate;
+    transform-origin: top;
+    transform-box: fill-box;
+}
+
+@keyframes camera {
+    from {
+        transform: rotateZ(-30deg);
+    }
+    to {
+        transform: rotateZ(30deg);
+    }    
+}
+
+#girl-torso {
+    animation: breath 2.5s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    /* animation: breathExpand 2s linear infinite alternate; */
+}
+
+@keyframes breath {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(12deg);
+    }
+}
+@keyframes breathExpand {
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 1.04;
+    }    
+}
+
+#tablet {
+    animation: tablet 2s ease infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes tablet {
+    from {
+        transform: rotateZ(-6deg)
+    }
+    to {
+        transform: rotateZ(6deg);
+    }
+}
